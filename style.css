@@ -1,0 +1,86 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+/* Formulario */
+form {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+}
+
+form button {
+    width: 100%;
+    padding: 20px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Errores */
+#errores {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    color: #d9534f;
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 5px;
+    display: none; /* Ocultar por defecto */
+}
+
+/* Lista de usuarios */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+#usuario-lista {
+    max-width: auto;
+    margin: auto;
+    padding: 20px;
+    list-style: none;
+}
+
+#usuario-lista li {
+    background: #fff;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

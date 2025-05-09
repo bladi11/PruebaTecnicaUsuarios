@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1>Gestion de usuarios</h1>
+
+    <!-- Formulario para agregar usuarios -->
+    <form id="usuario-form">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <button type="submit">Agregar Usuario</button>
+    </form>
+
+     <!-- Sección para mostrar errores -->
+    <div id="errores"></div>
+
+     <!-- Sección para mostrar la lista de usuarios -->
+    <h2>Lista de Usuarios</h2>
+    <ul id="usuario-lista"></ul>
+
+    <script src="script.js"></script>
+        <!-- Los usuarios se agregarán aquí -->
+
+        
+    </body>
+    </html>

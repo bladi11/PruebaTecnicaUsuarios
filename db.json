@@ -1,0 +1,88 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Mario",
+      "email": "bladimir@gmail.com",
+      "edad": 27
+    },
+    {
+      "id": "2",
+      "nombre": "Juan",
+      "email": "juan@hotmail.com",
+      "edad": 30
+    },
+    {
+      "id": 3,
+      "nombre": "PRUEAID",
+      "email": "bladirmir11@gmail.com",
+      "edad": 15
+    },
+    {
+      "id": 4,
+      "nombre": "pruebaEDAD",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 5,
+      "nombre": "pruebaEDAD",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 6,
+      "nombre": "PRUEAED",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 7,
+      "nombre": "PRUEAEDAD",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 8,
+      "nombre": "prueba",
+      "email": "bladirmir11@gmail.com",
+      "edad": 1
+    },
+    {
+      "id": 9,
+      "nombre": "PRUEAEDAD",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 10,
+      "nombre": "PRUEAID",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 11,
+      "nombre": "PRUEAID",
+      "email": "bladirmir11@gmail.com",
+      "edad": 0
+    },
+    {
+      "id": 12,
+      "nombre": "pruebaaa",
+      "email": "bladirmir11@gmail.com",
+      "edad": 2
+    },
+    {
+      "id": 13,
+      "nombre": "PRUEAID",
+      "email": "bladirmir11@gmail.com",
+      "edad": 1
+    },
+    {
+      "id": 14,
+      "nombre": "Mario Galvez",
+      "email": "bladirmir11@gmail.com",
+      "edad": 27
+    }
+  ]
+}
