@@ -4,6 +4,7 @@ const errores = document.getElementById('errores');
 const api = 'http://localhost:3001/usuarios';  // api de bd
 
 async function cargarUsuarios() {
+    if (!usuarioInput) return; // Verifica si el elemento existe
     const res = await fetch(api);
     const data = await res.json();
     usuarioInput.innerHTML = '';
@@ -15,45 +16,47 @@ async function cargarUsuarios() {
     });
 }
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    errores.textContent = '';
+// Verifica si el formulario existe antes de agregar el evento
+if (form) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errores.textContent = '';
 
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const edad = parseInt(document.getElementById('edad').value);
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const edad = parseInt(document.getElementById('edad').value);
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (!nombre || !email || !emailRegex.test(email) || isNaN(edad) || edad <1 ) {
-        errores.textContent = 'Por favor, completa todos los campos correctamente.';
-        return;
-    }
-
-    try {
-
-        const resUsuarios = await fetch(api);
-        const usuarios = await resUsuarios.json();
-        const nextId = usuarios.length > 0 ? Math.max(...usuarios.map(u => u.id)) + 1 : 1;
-
-        const res = await fetch(api, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({id: nextId, nombre, email, edad })
-        });
-
-        if (!res.ok) {
-            throw new Error('Error al agregar el usuario');
+        if (!nombre || !email || !emailRegex.test(email) || isNaN(edad) || edad < 1) {
+            errores.textContent = 'Por favor, completa todos los campos correctamente.';
+            return;
         }
 
-        form.reset();
-        cargarUsuarios();
-    } catch (error) {
-        errores.textContent = "Error: ${error.message}";
-    }
-});
+        try {
+            const resUsuarios = await fetch(api);
+            const usuarios = await resUsuarios.json();
+            const nextId = usuarios.length > 0 ? Math.max(...usuarios.map(u => u.id)) + 1 : 1;
 
-// Cargar usuarios
+            const res = await fetch(api, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: nextId, nombre, email, edad })
+            });
+
+            if (!res.ok) {
+                throw new Error('Error al agregar el usuario');
+            }
+
+            form.reset();
+            cargarUsuarios();
+        } catch (error) {
+            errores.textContent = `Error: ${error.message}`;
+        }
+    });
+}
+
+// Cargar usuarios solo si el elemento existe
 cargarUsuarios();

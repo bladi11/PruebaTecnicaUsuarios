@@ -84,3 +84,51 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.menu {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu button {
+    padding: 15px 30px;
+    margin: 10px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background: #45a049;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.info-column h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.info-column p {
+    color: #333;
+    line-height: 1.6;
+}
